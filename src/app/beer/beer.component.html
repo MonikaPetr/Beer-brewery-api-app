@@ -1,0 +1,16 @@
+<div class="hero">
+  <h1>Beer App</h1>
+  <form>
+    <input type="text" #city placeholder="Enter city"> <br>
+    <button type="button" (click)="getBeer(city.value)">Submit</button>
+  </form>
+  <div class="info">
+    <div id="title" *ngFor="let beer of beers">
+      <h4 >{{beer.name}}</h4>
+      <p>{{beer.status}}</p>
+      <p>{{beer.country}}</p>
+      <p>{{beer.phone}}</p>
+      <a href="{{beer.reviewlink}}">Get Details and Map</a>
+    </div>
+  </div>
+</div>
